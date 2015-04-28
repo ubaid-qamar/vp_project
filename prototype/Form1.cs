@@ -61,5 +61,40 @@ namespace prototype
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if(openFileDialog1.ShowDialog()==DialogResult.OK)
+            {
+                axWindowsMediaPlayer1.URL = openFileDialog1.FileName;
+
+            }
+        }
+
+        private void addVideosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                axWindowsMediaPlayer1.URL = openFileDialog1.FileName;
+
+            }
+        }
+
+        private void creditsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.BackColor = Color.White;
+            this.ForeColor = Color.Black;
+            this.Size = new System.Drawing.Size(155, 265);
+            this.Text = "Run-time Controls";
+            this.FormBorderStyle = FormBorderStyle.FixedDialog;
+            this.StartPosition = FormStartPosition.CenterScreen;
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -12,3 +12,6 @@ c:\users\moon satti\documents\visual studio 2013\Projects\prototype\prototype\ob
 c:\users\moon satti\documents\visual studio 2013\Projects\prototype\prototype\obj\Debug\prototype.csproj.GenerateResource.Cache
 c:\users\moon satti\documents\visual studio 2013\Projects\prototype\prototype\obj\Debug\prototype.exe
 c:\users\moon satti\documents\visual studio 2013\Projects\prototype\prototype\obj\Debug\prototype.pdb
+C:\Users\Moon satti\documents\visual studio 2013\Projects\prototype\prototype\obj\Debug\Interop.AccWizObjects.dll
+C:\Users\Moon satti\documents\visual studio 2013\Projects\prototype\prototype\obj\Debug\Interop.ADOMD.dll
+C:\Users\Moon satti\documents\visual studio 2013\Projects\prototype\prototype\obj\Debug\Interop.AMovie.dll
