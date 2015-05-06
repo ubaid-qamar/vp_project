@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.button3 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
@@ -88,6 +89,7 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
             this.openFileDialog3 = new System.Windows.Forms.OpenFileDialog();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -108,6 +110,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button4);
+            this.groupBox1.Controls.Add(this.checkBox1);
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.button1);
@@ -117,6 +121,16 @@
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "storyboard";
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(110, 121);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(80, 17);
+            this.checkBox1.TabIndex = 3;
+            this.checkBox1.Text = "checkBox1";
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
@@ -139,6 +153,7 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "frames";
+
             // 
             // vScrollBar1
             // 
@@ -186,7 +201,7 @@
             // openProjectToolStripMenuItem
             // 
             this.openProjectToolStripMenuItem.Name = "openProjectToolStripMenuItem";
-            this.openProjectToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.openProjectToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.openProjectToolStripMenuItem.Text = "open project";
             this.openProjectToolStripMenuItem.Click += new System.EventHandler(this.openProjectToolStripMenuItem_Click);
             // 
@@ -247,14 +262,14 @@
             // 
             this.captionToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("captionToolStripMenuItem.Image")));
             this.captionToolStripMenuItem.Name = "captionToolStripMenuItem";
-            this.captionToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.captionToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.captionToolStripMenuItem.Text = "Caption";
             // 
             // titleToolStripMenuItem
             // 
             this.titleToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("titleToolStripMenuItem.Image")));
             this.titleToolStripMenuItem.Name = "titleToolStripMenuItem";
-            this.titleToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.titleToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.titleToolStripMenuItem.Text = "Title";
             this.titleToolStripMenuItem.Click += new System.EventHandler(this.titleToolStripMenuItem_Click);
             // 
@@ -262,7 +277,7 @@
             // 
             this.creditsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("creditsToolStripMenuItem.Image")));
             this.creditsToolStripMenuItem.Name = "creditsToolStripMenuItem";
-            this.creditsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.creditsToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.creditsToolStripMenuItem.Text = "credits";
             this.creditsToolStripMenuItem.Click += new System.EventHandler(this.creditsToolStripMenuItem_Click);
             // 
@@ -442,7 +457,7 @@
             // 
             this.splitToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("splitToolStripMenuItem.Image")));
             this.splitToolStripMenuItem.Name = "splitToolStripMenuItem";
-            this.splitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.splitToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.splitToolStripMenuItem.Text = "Split";
             this.splitToolStripMenuItem.Click += new System.EventHandler(this.splitToolStripMenuItem_Click);
             // 
@@ -534,7 +549,7 @@
             this.groupBox3.Controls.Add(this.button2);
             this.groupBox3.Location = new System.Drawing.Point(4, 64);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(272, 188);
+            this.groupBox3.Size = new System.Drawing.Size(272, 200);
             this.groupBox3.TabIndex = 6;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Click Here TO  Browse for Videos";
@@ -561,6 +576,16 @@
             // 
             this.openFileDialog3.FileName = "openFileDialog3";
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(11, 101);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 4;
+            this.button4.Text = "button4";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -578,6 +603,7 @@
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -648,6 +674,8 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.OpenFileDialog openFileDialog2;
         private System.Windows.Forms.OpenFileDialog openFileDialog3;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Button button4;
     }
 }
 
