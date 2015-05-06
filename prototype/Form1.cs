@@ -328,6 +328,7 @@ namespace prototype
         private void button4_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start(@"C:\Users\Moon satti\Downloads\CODE\ffmpeg\ffmpeg.exe",argument);
+            MessageBox.Show(argument);
         }
 
 

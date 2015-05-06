@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button4 = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.button3 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -89,7 +90,6 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
             this.openFileDialog3 = new System.Windows.Forms.OpenFileDialog();
-            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -122,6 +122,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "storyboard";
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(11, 101);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 4;
+            this.button4.Text = "split";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
@@ -153,11 +163,10 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "frames";
-
             // 
             // vScrollBar1
             // 
-            this.vScrollBar1.Location = new System.Drawing.Point(616, 15);
+            this.vScrollBar1.Location = new System.Drawing.Point(619, 0);
             this.vScrollBar1.Name = "vScrollBar1";
             this.vScrollBar1.Size = new System.Drawing.Size(17, 85);
             this.vScrollBar1.TabIndex = 0;
@@ -325,7 +334,7 @@
             this.xToolStripMenuItem8});
             this.speedToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("speedToolStripMenuItem.Image")));
             this.speedToolStripMenuItem.Name = "speedToolStripMenuItem";
-            this.speedToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.speedToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.speedToolStripMenuItem.Text = "speed";
             // 
             // xToolStripMenuItem
@@ -396,7 +405,7 @@
             this.toolStripMenuItem10});
             this.durationToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("durationToolStripMenuItem.Image")));
             this.durationToolStripMenuItem.Name = "durationToolStripMenuItem";
-            this.durationToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.durationToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.durationToolStripMenuItem.Text = "Duration";
             // 
             // toolStripMenuItem2
@@ -457,7 +466,7 @@
             // 
             this.splitToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("splitToolStripMenuItem.Image")));
             this.splitToolStripMenuItem.Name = "splitToolStripMenuItem";
-            this.splitToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.splitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.splitToolStripMenuItem.Text = "Split";
             this.splitToolStripMenuItem.Click += new System.EventHandler(this.splitToolStripMenuItem_Click);
             // 
@@ -465,42 +474,42 @@
             // 
             this.setStartPointToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("setStartPointToolStripMenuItem.Image")));
             this.setStartPointToolStripMenuItem.Name = "setStartPointToolStripMenuItem";
-            this.setStartPointToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.setStartPointToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.setStartPointToolStripMenuItem.Text = "Set start point";
             // 
             // setEndPointToolStripMenuItem
             // 
             this.setEndPointToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("setEndPointToolStripMenuItem.Image")));
             this.setEndPointToolStripMenuItem.Name = "setEndPointToolStripMenuItem";
-            this.setEndPointToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.setEndPointToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.setEndPointToolStripMenuItem.Text = "Set end point ";
             // 
             // rotateLeftToolStripMenuItem
             // 
             this.rotateLeftToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("rotateLeftToolStripMenuItem.Image")));
             this.rotateLeftToolStripMenuItem.Name = "rotateLeftToolStripMenuItem";
-            this.rotateLeftToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.rotateLeftToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.rotateLeftToolStripMenuItem.Text = "Rotate Left";
             // 
             // rotateRightToolStripMenuItem
             // 
             this.rotateRightToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("rotateRightToolStripMenuItem.Image")));
             this.rotateRightToolStripMenuItem.Name = "rotateRightToolStripMenuItem";
-            this.rotateRightToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.rotateRightToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.rotateRightToolStripMenuItem.Text = "Rotate Right";
             // 
             // removeToolStripMenuItem
             // 
             this.removeToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("removeToolStripMenuItem.Image")));
             this.removeToolStripMenuItem.Name = "removeToolStripMenuItem";
-            this.removeToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.removeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.removeToolStripMenuItem.Text = "Remove";
             // 
             // selectAllToolStripMenuItem1
             // 
             this.selectAllToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("selectAllToolStripMenuItem1.Image")));
             this.selectAllToolStripMenuItem1.Name = "selectAllToolStripMenuItem1";
-            this.selectAllToolStripMenuItem1.Size = new System.Drawing.Size(147, 22);
+            this.selectAllToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.selectAllToolStripMenuItem1.Text = "Select all";
             // 
             // viewToolStripMenuItem
@@ -575,16 +584,6 @@
             // openFileDialog3
             // 
             this.openFileDialog3.FileName = "openFileDialog3";
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(11, 101);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // Form1
             // 
