@@ -17,6 +17,7 @@ namespace prototype
     public partial class Form1 : Form
     {
         string argument;
+       
         public Form1()
         {
             InitializeComponent();
@@ -72,9 +73,21 @@ namespace prototype
         {
             if(openFileDialog1.ShowDialog()==DialogResult.OK)
             {
+                string start;
+                string end;
+                start= textBox1.Text.ToString();
+                end= textBox2.Text.ToString();
                 axWindowsMediaPlayer1.URL = openFileDialog1.FileName;
-                argument += openFileDialog1.FileName + " -ss 00:00:07 -t 00:00:17 output.avi";
-
+                string splittime = " -ss ";
+                splittime += start;
+                splittime += "-t ";
+                splittime += end;
+                splittime+=" output1.avi";
+                
+                //argument += openFileDialog1.FileName + " -ss 00:00:07 -t 00:00:17 output.avi";
+                
+               argument += openFileDialog1.FileName + splittime;
+               MessageBox.Show(splittime);
             }
         }
 
@@ -327,12 +340,29 @@ namespace prototype
 
         private void button4_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start(@"C:\Users\Moon satti\Downloads\CODE\ffmpeg\ffmpeg.exe",argument);
+            System.Diagnostics.Process.Start(@"C:\Users\Moon satti\Downloads\CODE\ffmpeg\ffmpeg.exe", argument);
             MessageBox.Show(argument);
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
 
+        }
 
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
+
+
+
+    
+
 
