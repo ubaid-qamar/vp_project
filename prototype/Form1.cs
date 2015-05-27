@@ -11,15 +11,20 @@ using System.Windows.Forms;
 //using Microsoft.Build.Framework;
 using System.Runtime.InteropServices;
 using System.IO;
+using System.Diagnostics;
 
 namespace prototype
 {
     public partial class Form1 : Form
     {
+
+
         string argument;
-       
+        string splittime;
+        string savePath;
         public Form1()
         {
+            
             InitializeComponent();
             argument = "-i ";
         }
@@ -73,21 +78,13 @@ namespace prototype
         {
             if(openFileDialog1.ShowDialog()==DialogResult.OK)
             {
-                string start;
-                string end;
-                start= textBox1.Text.ToString();
-                end= textBox2.Text.ToString();
+                
                 axWindowsMediaPlayer1.URL = openFileDialog1.FileName;
-                string splittime = " -ss ";
-                splittime += start;
-                splittime += "-t ";
-                splittime += end;
-                splittime+=" output1.avi";
+                
                 
                 //argument += openFileDialog1.FileName + " -ss 00:00:07 -t 00:00:17 output.avi";
                 
-               argument += openFileDialog1.FileName + splittime;
-               MessageBox.Show(splittime);
+               argument += openFileDialog1.FileName;
             }
         }
 
@@ -340,8 +337,20 @@ namespace prototype
 
         private void button4_Click(object sender, EventArgs e)
         {
+            string start;
+            string end;
+            start = textBox1.Text.ToString();
+            end = textBox2.Text.ToString();
+            splittime = " -ss ";
+            splittime += start;
+            splittime += " -t ";
+            splittime += end;
+            splittime += " "+savePath+".avi";
+            argument += splittime;
             System.Diagnostics.Process.Start(@"C:\Users\Moon satti\Downloads\CODE\ffmpeg\ffmpeg.exe", argument);
             MessageBox.Show(argument);
+            argument="";
+            splittime="";
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -355,6 +364,27 @@ namespace prototype
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void saveSplit_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog savesplit = new SaveFileDialog();
+
+            if(savesplit.ShowDialog()==DialogResult.OK)
+            {
+                savePath = savesplit.FileName;
+                textboxSave.Text = savePath;
+            }
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
         {
 
         }
