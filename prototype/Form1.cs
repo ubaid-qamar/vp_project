@@ -386,7 +386,42 @@ namespace prototype
 
         private void button3_Click(object sender, EventArgs e)
         {
+            //if (openFileDialog4.ShowDialog() == DialogResult.OK)
+            //{
 
+            //    string start;
+            //    string end;
+            //    string output;
+            //    start = textBox1.Text.ToString();
+            //    end = textBox2.ToString();
+            //    output = startFrom.Text.ToString();
+            //    output += ".avi";
+            //    axWindowsMediaPlayer1.URL = openFileDialog1.FileName;
+            //    string splittime = " -ss ";
+            //    splittime += start;
+            //    splittime += " -t ";
+            //    splittime += end;
+            //    splittime += " ";
+            //    splittime += output;
+
+
+            //    //   argument += openFileDialog1.FileName + " -ss " + start + "-t " + end + " output.avi";
+            //    //   argument += openFileDialog1.FileName + " -ss 00:00:07 -t 00:00:17 output.avi";
+            //    argument += "ffmpeg -i " + openFileDialog1.FileName + " -i " + openFileDialog4.FileName + " -c:v copy -c:a copy output.avi";
+            //    //argument += "ffmpeg -i "+ openFileDialog4.FileName+" -i "+openFileDialog4.FileName +" final_video.avi";
+            //    //   MessageBox.Show(argument);
+            //}
+        }
+
+        private void saveProjectToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog savesplit = new SaveFileDialog();
+
+            if (savesplit.ShowDialog() == DialogResult.OK)
+            {
+                savePath = savesplit.FileName;
+                textboxSave.Text = savePath;
+            }
         }
     }
 }

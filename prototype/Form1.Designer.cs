@@ -82,8 +82,6 @@
             this.splitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.setStartPointToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.setEndPointToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rotateLeftToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rotateRightToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.removeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.selectAllToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -277,26 +275,27 @@
             // openProjectToolStripMenuItem
             // 
             this.openProjectToolStripMenuItem.Name = "openProjectToolStripMenuItem";
-            this.openProjectToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.openProjectToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.openProjectToolStripMenuItem.Text = "open project";
             this.openProjectToolStripMenuItem.Click += new System.EventHandler(this.openProjectToolStripMenuItem_Click);
             // 
             // saveProjectToolStripMenuItem
             // 
             this.saveProjectToolStripMenuItem.Name = "saveProjectToolStripMenuItem";
-            this.saveProjectToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.saveProjectToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.saveProjectToolStripMenuItem.Text = "Save project";
+            this.saveProjectToolStripMenuItem.Click += new System.EventHandler(this.saveProjectToolStripMenuItem_Click);
             // 
             // saveMovieToolStripMenuItem
             // 
             this.saveMovieToolStripMenuItem.Name = "saveMovieToolStripMenuItem";
-            this.saveMovieToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.saveMovieToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.saveMovieToolStripMenuItem.Text = "Save movie";
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -379,8 +378,6 @@
             this.splitToolStripMenuItem,
             this.setStartPointToolStripMenuItem,
             this.setEndPointToolStripMenuItem,
-            this.rotateLeftToolStripMenuItem,
-            this.rotateRightToolStripMenuItem,
             this.removeToolStripMenuItem,
             this.selectAllToolStripMenuItem1});
             this.editToolStripMenuItem1.Name = "editToolStripMenuItem1";
@@ -550,20 +547,6 @@
             this.setEndPointToolStripMenuItem.Name = "setEndPointToolStripMenuItem";
             this.setEndPointToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.setEndPointToolStripMenuItem.Text = "Set end point ";
-            // 
-            // rotateLeftToolStripMenuItem
-            // 
-            this.rotateLeftToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("rotateLeftToolStripMenuItem.Image")));
-            this.rotateLeftToolStripMenuItem.Name = "rotateLeftToolStripMenuItem";
-            this.rotateLeftToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
-            this.rotateLeftToolStripMenuItem.Text = "Rotate Left";
-            // 
-            // rotateRightToolStripMenuItem
-            // 
-            this.rotateRightToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("rotateRightToolStripMenuItem.Image")));
-            this.rotateRightToolStripMenuItem.Name = "rotateRightToolStripMenuItem";
-            this.rotateRightToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
-            this.rotateRightToolStripMenuItem.Text = "Rotate Right";
             // 
             // removeToolStripMenuItem
             // 
@@ -744,8 +727,6 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ToolStripMenuItem brightnessToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem rotateLeftToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem rotateRightToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem removeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem selectAllToolStripMenuItem1;
         private System.Windows.Forms.Button button2;
